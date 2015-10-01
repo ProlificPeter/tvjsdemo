@@ -11,12 +11,12 @@ App.onLaunch = function(options){ /* App Launcher */
 			resourceLoader = new ResourceLoader(options.BASEURL);
 			resourceLoader.loadResource(`${options.BASEURL}templates/AlertTemplate.tvml.js`, "This is a test", function(resource) {
 				var doc = Presenter.makeDocument(resource);
-				
+				doc.addEventListener("select", Presenter.load.bind(Presenter));
 				Presenter.pushDocument(doc);
 
 			});
 		} else{
-			// Necessaryily freaking out. Explain who is the culprit.
+			// Necessarily freaking out. Explain who is the culprit.
 			var errorDoc = createAlert("Evaluate Scripts Error", "Error attempting to evaluate external Javascript files: " + javascriptFiles);
 			navigationDocument.presentModal(errorDoc);
 		}

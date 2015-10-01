@@ -1,4 +1,8 @@
-var AlertTemplate = function(simpleText) { return `<?xml version="1.0" encoding="UTF-8" ?>
+var AlertTemplate = function(simpleText) { 
+
+//todo: accept simpleText as an array of strings to populate alert fields
+
+	return `<?xml version="1.0" encoding="UTF-8" ?>
     <document>
       <alertTemplate>
         <title>Alert Template Title</title>
