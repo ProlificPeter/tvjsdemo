@@ -23,4 +23,11 @@ var Presenter = {
 		navigationDocument.pushDocument(xml);
 	},
 
+	load: function(event) {
+
+	var self = this,
+	eTarget = event.target,
+	videoURL = eTarget.getAttribute("videoURL")
+
+	},
 }
